@@ -9,7 +9,8 @@ pip install -r requirements.txt
 python main.py s3download arome-france-hd 2021-08-03
 ```
 
-Note, on MF machines you need to provide the mf certificate using env var otherwise boto3
+Note, on corporate machines behind a mitm SSL proxy you need to provide the corporate
+root certificate using env var otherwise boto3
 will fail with ssl errors:
 ```
 export AWS_CA_BUNDLE=/home/frank/mf.crt
@@ -33,7 +34,7 @@ arome-france-hd_v2_2021-08-03_00_BRTMP_isobaric_14h.grib2.inv
 arome-france-hd_v2_2021-08-03_00_BRTMP_isobaric_15h.grib2.inv
 ```
 
-# Upload to a local minio instance
+# Upload to a local minio instance
 
 The cli also features a s3upload subcommand.
 
